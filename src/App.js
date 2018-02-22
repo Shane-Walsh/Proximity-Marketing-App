@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
+import Review from "./Reviews";
+import Picview from "./Pics";
+
 
 class App extends Component {
   render() {
@@ -17,6 +20,10 @@ class App extends Component {
             <br/>
             <img src="../images/pricecompare.png" className="Price-info" alt="Price Info" />
         </p>
+          <div>
+              <Picview/>
+              <Review/>
+          </div>
       </div>
     );
   }
