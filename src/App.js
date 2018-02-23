@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/App.css';
-import Review from "./Reviews";
-import Picview from "./Pics";
+import Review from "./components/Reviews";
+import Desc from './components/Discription';
+import Compare from "./components/Comparison";
 
 
 class App extends Component {
@@ -21,8 +22,11 @@ class App extends Component {
             <img src="../images/pricecompare.png" className="Price-info" alt="Price Info" />
         </p>
           <div>
-              <Picview/>
+              <Desc/>
+              <h1>Reviews</h1>
               <Review/>
+              <h1>Price Comparison</h1>
+              <Compare/>
           </div>
       </div>
     );

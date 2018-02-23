@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import './style/Reviews.css';
+import '../style/Reviews.css';
+//import Picview from "./Pics";
 
-const url = 'http://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1515964550546&sort=crawled&q=Adidas%20NEO%20Cloudfoam%20language%3Aenglish%20item.country%3AUS';
+const url = 'http://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1516737971798&sort=crawled&q=Asics%20Gel&size=7';
 //Asics Gel-Lyte Trainers
 
-class Review extends Component {
+class Desc extends Component {
 
     constructor() {
         super();
@@ -25,10 +26,13 @@ class Review extends Component {
 
                 return (
 
-                    <div key={inst.reviews}>
-                        {/*<img src={inst.item.title} alt="Title" />*/}
-                        <h1 className="reviewTitle">{inst.item.title}</h1>
-                        <h3 className="reviewText">{inst.text}</h3>
+                    <div className="card" key={inst.reviews}>
+                        <h4 className="reviewTitle">Rating <span className="rating"> {inst.rating} / 5 </span> By <span className="author">{inst.author} </span> From {inst.item.country}</h4>
+
+                            <div className="container">
+                                <p className="reviewText">{inst.text}</p>
+                                <hr/>
+                            </div>
                     </div>
                 )
 
@@ -55,4 +59,4 @@ class Review extends Component {
 }
 
 
-export default Review;
+export default Desc;

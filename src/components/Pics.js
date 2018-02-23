@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style/App.css';
+import '../style/App.css';
 
 //const url = 'http://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1515964550546&sort=crawled&q=Adidas%20NEO%20Cloudfoam%20language%3Aenglish%20item.country%3AUS';
 
@@ -14,7 +14,7 @@ class Picview extends Component {
     }
 
     componentDidMount() {
-        fetch('https://randomuser.me/api/?results=4').then(results => {
+        fetch('https://randomuser.me/api/?results=1&gender=female').then(results => {
 
                 return results.json();
             }
