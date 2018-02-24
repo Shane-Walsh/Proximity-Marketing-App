@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../style/Compare.css';
 //import Picview from "./Pics";
 
-const url = 'http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Asics%20FuzeX%20Lyte%20language%3Aenglish%20price%3A%3E100%20price%3A%3C140&size=4';
+const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Asics%20FuzeX%20Lyte%20language%3Aenglish%20price%3A%3E100%20price%3A%3C140&size=4';
 //Nike < 140
 //http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Women%20Running%20brand%3ANike%20site%3Aaliexpress.com%20price%3A%3C140&ts=1516747792991
 //Adidas
