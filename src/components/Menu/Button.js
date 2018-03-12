@@ -10,7 +10,7 @@ class FloatingButton extends Component {
 
         return(
             <div>
-                <FloatingActionButton className="floating-action-button" secondary={true} href="../Voucher">
+                <FloatingActionButton className="floating-action-button" secondary={true} href="../Res/Voucher/Voucher">
                     <ContentAdd />
                 </FloatingActionButton>
 
