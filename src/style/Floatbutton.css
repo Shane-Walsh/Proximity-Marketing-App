@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+/* NOT USING THIS CSS */
+
+.floating-menu {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    height: 42px;
+    text-align: right;
+    transition: height 250ms ease-in-out;
+}
+
+.floating-menu.open {
+    height: 300px;
+    overflow: hidden;
+}
+
+.floating-menu.open .floating-menu-item {
+    margin-top: 8px;
+}
+
+.floating-menu-item label{
+    display: inline-block;
+    margin-right: 8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(0,0,0,.25);
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.floating-menu.open .floating-menu-item label {
+    opacity: 0.4;
+}
+
+.floating-menu-icon{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    vertical-align: middle;
+    /*background: #e53935;*/
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.floating-menu-icon .material-icons {
+    font-size: 32px;
+    color: #fff;
+    vertical-align: middle;
+}

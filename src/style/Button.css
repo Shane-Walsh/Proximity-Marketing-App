@@ -1,0 +1,7 @@
+.floating-action-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 50px;
+    transition: height 250ms ease-in-out;
+}
