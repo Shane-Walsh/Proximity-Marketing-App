@@ -1,10 +1,69 @@
 import React, { Component } from 'react';
+import '../style/Voucher.css';
+
+const voucherifyClient = require('voucherify')
+const client = voucherifyClient({
+    applicationId: '2fec3394-7a05-4f36-b431-0129e74d904b',
+    clientSecretKey: 'fb668b0b-b2cf-4c63-b28c-58efb561f588'
+})
+
+const style ={
+    color: 'white',
+}
 
 class RedeemVoucher extends Component{
 
+    componentDidMount() {
+
+        //Check user
+        client.vouchers.get("test_voucher_1")
+            .then((result) => {
+                console.log(result)
+            })
+            .catch((error) => {
+                console.error("Error: %s", error)
+            })
+/*
+    //Validate Voucher
+        client.validations.validateVoucher("test_voucher_1")
+        client.validations.validateVoucher("test_voucher_1", {
+            order: {
+                amount: 5000,
+                items: [
+                    { product_id: "prod_f1r5Tpr0DuC7", quantity: 2},
+                    { product_id: "test_prod_id_2", quantity: 1}
+                ],
+            },
+            customer: {
+                source_id: "test_customer_id_1"
+            },
+            metadata: {
+                locale: "en-GB"
+            }
+        })
+
+        //Redeem Voucher
+        client.redemptions.redeem("test_voucher_1", {
+            order: {
+                amount: 5000,
+                items: [
+                    { product_id: "prod_f1r5Tpr0DuC7", quantity: 2},
+                    { product_id: "test_prod_id_2", quantity: 1}
+                ],
+            },
+            customer: {
+                source_id: "test_customer_id_1"
+            },
+            metadata: {
+                locale: "en-GB"
+            }
+        })
+*/
+
+
+    }
+
     render(){
-
-
         //***********  Voucherify **************//
         //Application Keys
         //
@@ -21,7 +80,7 @@ class RedeemVoucher extends Component{
         return(
 
             <div>
-                <h4>Voucher</h4>
+                <h4 style={style}>Voucher</h4>
             </div>
         );
     }
