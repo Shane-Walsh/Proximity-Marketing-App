@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
 import RedeemVoucher from "./routes/Voucher";
 import LandingPage from "./routes/Landing";
+import SignInPage from "./routes/signin";
 
 
 class App extends Component {
@@ -14,6 +15,10 @@ class App extends Component {
                 <Route
                     exact path={routes.LANDING}
                     component={() => <LandingPage />}
+                />
+                <Route
+                    exact path={routes.SIGNIN}
+                    component={() => <SignInPage />}
                 />
                 <Route
                     exact path={routes.VOUCHER}
