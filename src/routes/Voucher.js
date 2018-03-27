@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../style/Voucher.css';
 
 const voucherifyClient = require('voucherify')
+
 const client = voucherifyClient({
     applicationId: '2fec3394-7a05-4f36-b431-0129e74d904b',
     clientSecretKey: 'fb668b0b-b2cf-4c63-b28c-58efb561f588'
@@ -18,7 +19,7 @@ class RedeemVoucher extends Component{
         //Check user
         client.vouchers.get("test_voucher_1")
             .then((result) => {
-                console.log(result)
+                console.log("Result: " + result)
             })
             .catch((error) => {
                 console.error("Error: %s", error)
