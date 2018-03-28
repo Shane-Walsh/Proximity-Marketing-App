@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
+import '../style/Signin.css';
 
 const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -8,11 +9,38 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 class SignInPage extends Component {
 
+    constructor(props) {
+        super(props);
+        //track of component state
+        this.state = {
+            user_photo: '',
+            user_name : '',
+            user_email: '',
+            user_id: ''
+        }
+
+        //handle methods needs to be bound to the constructor
+        this.handleGoogleSignin = this.handleGoogleSignin.bind(this);
+    }
+
     handleGoogleSignin(user){
 
         if(user){
             //if user signed in - go to voucher page
-            window.location.href = "/voucher";
+            //window.location.href = "/voucher";
+
+                //Display user object
+                console.log("Display Name: " + user.displayName);
+                console.log("Email: " + user.email);
+                console.log("UID: " + user.uid);
+                console.log("Photo: " + user.photoURL);
+
+            this.setState({
+                user_name: user.displayName,
+                user_email: user.email,
+                user_id: user.uid,
+                user_photo: user.photoURL
+            });
 
         }else{
             //Google social signin
@@ -30,7 +58,10 @@ class SignInPage extends Component {
 
         return(
 
-            <div></div>
+            <div className="user_info">
+                <h3 className="user_name">{this.state.user_name}</h3>
+                <img src={this.state.user_photo} alt="Avatar" className="user_photo" />
+            </div>
 
         );
     }

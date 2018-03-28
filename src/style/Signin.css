@@ -1,0 +1,18 @@
+.user_photo {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.user_info{
+    padding-top: 10px;
+    text-align: center;
+    height: 60px;
+    background-color: azure;
+}
+.user_name{
+    font-weight: lighter;
+    color: gold;
+}
