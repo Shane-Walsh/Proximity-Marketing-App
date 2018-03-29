@@ -42,6 +42,9 @@ class SignInPage extends Component {
                 user_photo: user.photoURL
             });
 
+            //create customer with Voucherify
+
+
         }else{
             //Google social signin
             firebase.auth().signInWithRedirect(provider);

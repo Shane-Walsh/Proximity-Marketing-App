@@ -16,7 +16,7 @@ class RedeemVoucher extends Component{
 
     componentDidMount() {
 
-        //Check user
+        //Check user using promises: https://github.com/voucherifyio/voucherify-nodejs-sdk
         client.vouchers.get("test_voucher_1")
             .then((result) => {
                 console.log("Result: " + result)
