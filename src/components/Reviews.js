@@ -8,7 +8,7 @@ import StarRatingComponent from 'react-star-rating-component';
 const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1516737971798&sort=crawled&q=Asics%20Gel&size=7';
 //Asics Gel-Lyte Trainers
 
-class Desc extends Component {
+class Review extends Component {
 
     constructor() {
         super();
@@ -34,7 +34,6 @@ class Desc extends Component {
                         <div>
                             <StarRatingComponent name="starRating" starCount={5} value={inst.rating} />
                         </div>
-
 
                             <div className="container">
                                 <p className="reviewText">{inst.text}</p>
@@ -66,4 +65,4 @@ class Desc extends Component {
 }
 
 
-export default Desc;
+export default Review;
