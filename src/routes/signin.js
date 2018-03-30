@@ -36,7 +36,7 @@ class SignInPage extends Component {
             //if user signed in - go to voucher page
             //window.location.href = "/voucher";
 
-                //Display user object
+                //Display user object or console
                 console.log("Display Name: " + user.displayName);
                 console.log("Email: " + user.email);
                 console.log("UID: " + user.uid);
@@ -49,7 +49,7 @@ class SignInPage extends Component {
                 user_photo: user.photoURL
             });
 
-            //create customer object using social signin data
+            //create customer object with Voucherify using social signin data
 
             client.customers.create({
                 "id": "",
@@ -116,7 +116,28 @@ class SignInPage extends Component {
             <div className="user_info">
                 <h3 className="user_name">{this.state.user_name}</h3>
                 <img src={this.state.user_photo} alt="Avatar" className="user_photo" />
+                <div><br/></div>
+                <div>
+                <div className="voucherify-get-voucher"
+                     data-client-app-id="2dc19d68-85a9-487b-9179-90600753c22f"
+                     data-client-token="d6921199-d3cb-4f5b-b4fd-ebe31dbc1657"
+                     data-email-required="true"
+                     data-name-required="false"
+                     data-campaign="Summer Sale"></div>
+                </div>
+                <div>
+                    <div class="voucherify-voucher-redeem"
+                         data-client-app-id="2dc19d68-85a9-487b-9179-90600753c22f"
+                         data-client-token="d6921199-d3cb-4f5b-b4fd-ebe31dbc1657"
 
+                         data-code-field="true"
+                         data-code-field-label="Voucher"
+
+                         data-button-label="Redeem voucher"
+
+
+                         data-metadata="{'example': true, 'lang': 'eng'}"></div>
+                </div>
             </div>
 
         );

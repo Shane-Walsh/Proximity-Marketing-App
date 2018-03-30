@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: #999999;
+  /*background-color: #999999;*/
+  background-color: lightpink;
 }
 
 .App-logo {
