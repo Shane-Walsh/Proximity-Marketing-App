@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/Description.css';
+import '../../style/Description.css';
 //import Picview from "./Pics";
 
 //const url = 'http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Asics%20Gel-Lyte&ts=1516740126505&size=1';
@@ -18,7 +18,7 @@ class Desc extends Component {
 
                     <div className="card">
                         <h2 className="descTitle">Asics Gel-Lyte Trainers</h2>
-                        <img src={ require('../assets/pinkShoe.jpg') } alt="Footware" className="imgDesc" />
+                        <img src={ require('../../assets/pinkShoe.jpg') } alt="Footware" className="imgDesc" />
                         <div className="container">
                             <p>The Asics Gel-Lyte Womens Running Trainers are made with all that is required
                                 for a perfect run: which includes a removable comfordry sockliner to provide

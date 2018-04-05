@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Review from "../components/Reviews";
-import Desc from '../components/Discription';
-import Compare from "../components/Comparison";
+import Review from "../components/Reviews/Reviews";
+import Desc from '../components/Descriptions/Description';
+import Compare from "../components/Compare/Comparison";
 import FloatingButton from '../components/Menu/Button';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 

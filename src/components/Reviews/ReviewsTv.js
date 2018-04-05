@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import '../style/Reviews.css';
-//import Stars from "./Ratings";
-//import Picview from "./Pics";
+import '../../style/Reviews.css';
 import StarRatingComponent from 'react-star-rating-component';
 
+//Criteria: Samsung 4K Smart TV language:english rating:5
+const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1520370469258&sort=crawled&q=Samsung%204K%20Smart%20TV%20language%3Aenglish%20rating%3A5&size=7';
 
-const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1516737971798&sort=crawled&q=Asics%20Gel&size=7';
-//Asics Gel-Lyte Trainers
 
-class Review extends Component {
+class ReviewsTvPage extends Component {
 
     constructor() {
         super();
         this.state = {
 
-            footware: [],
+            electronics: [],
         }
     }
 
@@ -25,7 +23,7 @@ class Review extends Component {
             }
         ).then(data => {
 
-            let footware = data.reviews.map((inst) => {
+            let electronics = data.reviews.map((inst) => {
 
                 return (
                     <div className="card" key={inst.reviews}>
@@ -35,16 +33,16 @@ class Review extends Component {
                             <StarRatingComponent name="starRating" starCount={5} value={inst.rating} />
                         </div>
 
-                            <div className="container">
-                                <p className="reviewText">{inst.text}</p>
-                                <hr/>
-                            </div>
+                        <div className="container">
+                            <p className="reviewText">{inst.text}</p>
+                            <hr/>
+                        </div>
                     </div>
                 )
 
             })
-            this.setState({footware: footware});
-            console.log("This is Review State: ", this.state.footware);
+            this.setState({electronics: electronics});
+            console.log("This is Review State: ", this.state.electronics);
         })
     }
 
@@ -55,7 +53,7 @@ class Review extends Component {
             <div className="container">
                 <div className="container">
 
-                    {this.state.footware}
+                    {this.state.electronics}
 
                 </div>
             </div>
@@ -65,4 +63,4 @@ class Review extends Component {
 }
 
 
-export default Review;
+export default ReviewsTvPage;

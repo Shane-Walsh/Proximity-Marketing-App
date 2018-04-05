@@ -5,6 +5,7 @@ import * as routes from './constants/routes';
 import RedeemVoucher from "./routes/Voucher";
 import LandingPage from "./routes/Landing";
 import SignInPage from "./routes/Signin";
+import TvPage from './routes/Electronic';
 
 
 class App extends Component {
@@ -12,6 +13,10 @@ class App extends Component {
     return (
         <BrowserRouter>
             <div className="App">
+                <Route
+                    exact path={routes.ELECTRONIC}
+                    component={() => <TvPage />}
+                />
                 <Route
                     exact path={routes.LANDING}
                     component={() => <LandingPage />}

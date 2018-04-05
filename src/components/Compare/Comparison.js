@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/Compare.css';
+import '../../style/Compare.css';
 //import Picview from "./Pics";
 
 const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Asics%20FuzeX%20Lyte%20language%3Aenglish%20price%3A%3E100%20price%3A%3C140&size=4';
