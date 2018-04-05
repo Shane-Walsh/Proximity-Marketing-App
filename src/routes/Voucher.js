@@ -3,11 +3,13 @@ import firebase from '../firebase/firebase';
 import '../style/Voucher.css';
 
 const provider = new firebase.auth.GoogleAuthProvider();
+//require firestore for data stoarge
+const firestore = require("firebase/firestore");
 
 //web client id ="549732289667-2h6nh25v3kkl3mpjl5ape0trj2qodkih.apps.googleusercontent.com";
 //sec = "mBUZznYNyw2DpIxOK46H-Qan";
 
-const voucherifyClient = require('voucherify')
+const voucherifyClient = require('voucherify');
 
 const client = voucherifyClient({
     applicationId: '2fec3394-7a05-4f36-b431-0129e74d904b',
@@ -28,6 +30,27 @@ class VoucherPage extends Component {
 
         //handle methods needs to be bound to the constructor
         this.handleGoogleSignin = this.handleGoogleSignin.bind(this);
+        this.handleUserFirestore = this.handleUserFirestore.bind(this);
+    }
+
+    handleUserFirestore(user){
+
+        // Initialize Cloud Firestore through Firebase
+        const db = firebase.firestore();
+
+        //add user_info to firestore
+        db.collection("user_info").add({
+            name: user.displayName,
+            email: user.email,
+            voucherify_uid: user.uid,
+            avatar: user.photoURL
+        })
+            .then(function(docRef) {
+                console.log("Document added with ID: ", docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
     }
 
     handleGoogleSignin(user){
@@ -96,6 +119,9 @@ class VoucherPage extends Component {
                 "updated_at": "2018-03-29T16:05:25Z",
                 "object": "customer"
             })
+
+            //write user info to firebase
+            this.handleUserFirestore(user)
 
         }else{
             //Google social signin
