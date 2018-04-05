@@ -9,7 +9,7 @@ class FloatingButton extends Component {
         //window.location.href = "/voucher";
         //conditional: if user signed in
         //window.location.href = "/signin";
-        document.location.assign(document.location.origin + "/signin")
+        document.location.assign(document.location.origin + "/Signin")
     }
 
     render(){

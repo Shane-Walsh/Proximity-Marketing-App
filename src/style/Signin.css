@@ -1,18 +1,15 @@
-.user_photo {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.vContain{
+    padding-top: 20px;
 }
-.user_info{
-    padding-top: 10px;
-    text-align: center;
-    height: 60px;
-    background-color: lightpink;
-}
-.user_name{
-    font-weight: lighter;
+.vtitle{
     color: white;
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.bt-g{
+    padding-left: 20%;
+    padding-top: 30%;
+    padding-bottom:150%;
+    background-color: white;
 }

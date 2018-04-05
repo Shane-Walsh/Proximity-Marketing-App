@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
 import RedeemVoucher from "./routes/Voucher";
 import LandingPage from "./routes/Landing";
-import SignInPage from "./routes/signin";
+import SignInPage from "./routes/Signin";
 
 
 class App extends Component {

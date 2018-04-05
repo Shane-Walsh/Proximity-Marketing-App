@@ -1,24 +1,18 @@
-/* Voucherify Widget
-*/
-
-#price {
-    font-family: sans-serif;
+.user_photo {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.user_info{
+    padding-top: 10px;
     text-align: center;
-    box-sizing: border-box;
-    width: 14em;
-    margin: 2em auto;
-    padding: 1em 0;
-    border: 1px solid #E5E5E5;
-    border-radius: 1em;
-    background-color: #F1F1F1;
-    color: #222;
+    height: 60px;
+    background-color: lightpink;
 }
-
-#discounted {
-    font-size: 1.5em;
-}
-
-.deprecated {
-    text-decoration: line-through;
-    color: #aaa;
+.user_name{
+    font-weight: lighter;
+    color: white;
 }
