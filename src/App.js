@@ -5,7 +5,8 @@ import * as routes from './constants/routes';
 import RedeemVoucher from "./routes/Voucher";
 import LandingPage from "./routes/Landing";
 import SignInPage from "./routes/Signin";
-import TvPage from './routes/Electronic';
+import TvPage from './routes/SAMSUNG_TV';
+import FootwarePage from "./routes/ASICS_Runners";
 
 
 class App extends Component {
@@ -13,6 +14,10 @@ class App extends Component {
     return (
         <BrowserRouter>
             <div className="App">
+                <Route
+                    exact path={routes.ASICS_RUNNERS}
+                    component={() => <FootwarePage/>}
+                />
                 <Route
                     exact path={routes.ELECTRONIC}
                     component={() => <TvPage />}
