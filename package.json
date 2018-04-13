@@ -13,6 +13,7 @@
     "react-google-button": "^0.5.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "react-social-login-buttons": "^1.3.6",
     "react-star-rating-component": "^1.3.0",
     "semantic-ui-react": "^0.78.2",
     "voucherify": "^2.13.1"
@@ -24,4 +25,3 @@
     "eject": "react-scripts eject"
   }
 }
-
