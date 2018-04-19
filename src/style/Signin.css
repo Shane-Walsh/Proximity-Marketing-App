@@ -7,9 +7,25 @@
     padding-top: 10px;
     padding-bottom: 15px;
 }
-.bt-g{
+.bt-social{
     padding-left: 20%;
     padding-top: 30%;
-    padding-bottom:150%;
+    /*padding-bottom:150%;*/
     background-color: white;
+}
+.imgVoucher{
+    width: 200px;
+    height: 200px;
+}
+.bt-g{
+    width: 245px;
+}
+.bt-f{
+    width: 245px;
+}
+.bt-t{
+    width: 245px;
+}
+.bt-i{
+    width: 245px;
 }

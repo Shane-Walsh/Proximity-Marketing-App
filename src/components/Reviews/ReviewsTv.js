@@ -17,6 +17,7 @@ class ReviewsTvPage extends Component {
     }
 
     componentDidMount() {
+
         fetch(url).then(reviews => {
 
                 return reviews.json();

@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
-import GoogleButton from 'react-google-button'
 import '../style/Signin.css';
 
-const provider = new firebase.auth.GoogleAuthProvider();
+import FacebookLoginButton from 'react-social-login-buttons/lib/buttons/FacebookLoginButton';
+import TwitterLoginButton from 'react-social-login-buttons/lib/buttons/TwitterLoginButton';
+import InstagramLoginButton from 'react-social-login-buttons/lib/buttons/InstagramLoginButton';
+import GoogleLoginButton from 'react-social-login-buttons/lib/buttons/GoogleLoginButton';
+
+//const provider = new firebase.auth.GoogleAuthProvider();
+const providerTwitter = new firebase.auth.TwitterAuthProvider();
 const voucherifyClient = require('voucherify')
 
 const client = voucherifyClient({
@@ -15,6 +20,7 @@ class SignInPage extends Component {
 
     Constructor() {
         this.handleClick = this.handleClick.bind(this);
+        this.handleTwitter = this.handleTwitter.bind(this);
     }
 
     componentDidMount(){
@@ -25,18 +31,39 @@ class SignInPage extends Component {
         document.location.assign(document.location.origin + "/Voucher")
     }
 
+    handleTwitter(){
+
+        firebase.auth().signInWithRedirect(providerTwitter);
+
+       //if(user){
+
+      // }
+    }
+
     render(){
 
         return(
 
             <div className="vContain">
             <div className="vtitle">
-                Sign In to Redeem Voucher
+                Sign in below to Redeem Voucher
             </div>
-                <div className="bt-g">
-                    <GoogleButton
-                        onClick={this.handleClick}
-                    />
+                <div className="bt-social">
+                    <div className="bt-g">
+                        <img src={require('../assets/pinkStar.png')} alt="voucher" className="imgVoucher"/>
+                    </div>
+                    <div className="bt-g">
+                        <h5>By signing in you agree to share your data with voucherify.io</h5>
+                    </div>
+                    <div className="bt-g">
+                        <GoogleLoginButton text="Google" onClick={this.handleClick}/>
+                    </div><br/>
+                    <div className="bt-f">
+                        <FacebookLoginButton text="Facebook" onClick={this.handleClick} />
+                    </div><br/>
+                    <div className="bt-t">
+                        <TwitterLoginButton text="  Twitter" onClick={this.handleTwitter} />
+                    </div>
                 </div>
             </div>
         );

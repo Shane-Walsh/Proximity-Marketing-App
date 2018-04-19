@@ -3,6 +3,7 @@ import firebase from '../firebase/firebase';
 import '../style/Voucher.css';
 
 const provider = new firebase.auth.GoogleAuthProvider();
+
 //require firestore for data stoarge
 const firestore = require("firebase/firestore");
 
@@ -124,8 +125,10 @@ class VoucherPage extends Component {
             this.handleUserFirestore(user)
 
         }else{
+
             //Google social signin
             firebase.auth().signInWithRedirect(provider);
+
         }
     }
 

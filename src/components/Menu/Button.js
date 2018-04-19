@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import AddIcon from 'material-ui/svg-icons/content/add';
+import RedeemIcon from 'material-ui/svg-icons/action/redeem';
 import '../../style/Button.css';
 
 class FloatingButton extends Component {
@@ -17,7 +17,7 @@ class FloatingButton extends Component {
         return(
             <div>
                 <FloatingActionButton className="floating-action-button" secondary={true} onClick={this.handleClick}>
-                    <AddIcon />
+                    <RedeemIcon />
                 </FloatingActionButton>
             </div>
         );
