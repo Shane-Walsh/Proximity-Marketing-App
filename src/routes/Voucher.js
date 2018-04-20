@@ -196,7 +196,7 @@ class VoucherPage extends Component {
                 <h3 className="user_name">{this.state.user_name}</h3>
                 <img src={this.state.user_photo} alt="" className="user_photo" />
                 <div><br/><br/></div>
-                <div className="heading">Get Voucher and Take to Casheer</div><br/>
+                <div className="heading">Get Voucher and Take to Cashier</div><br/>
                 <div>
                     <div className="voucherify-get-voucher"
                          data-client-app-id="2dc19d68-85a9-487b-9179-90600753c22f"
