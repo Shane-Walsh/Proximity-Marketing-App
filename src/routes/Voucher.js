@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
+import { Router, RouterContext, Link, browserHistory } from 'react-router';
+
 import '../style/Voucher.css';
+import ExitIcon from 'material-ui/svg-icons/action/exit-to-app';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import {greenA200, white} from 'material-ui/styles/colors';
 
 const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -17,6 +23,10 @@ const client = voucherifyClient({
     clientSecretKey: 'fb668b0b-b2cf-4c63-b28c-58efb561f588'
 })
 
+const iconStyles = {
+
+};
+
 class VoucherPage extends Component {
 
     constructor(props) {
@@ -26,12 +36,17 @@ class VoucherPage extends Component {
             user_photo: '',
             user_name : '',
             user_email: '',
-            user_id: ''
+            user_id: '',
+            voucherObj: [],
+            code: '',
+            discount: '',
+            qrCode: ''
         }
 
         //handle methods needs to be bound to the constructor
         this.handleGoogleSignin = this.handleGoogleSignin.bind(this);
         this.handleUserFirestore = this.handleUserFirestore.bind(this);
+        this.handleVoucher = this.handleVoucher.bind(this);
     }
 
     handleUserFirestore(user){
@@ -60,7 +75,7 @@ class VoucherPage extends Component {
             //if user signed in - go to voucher page
             //window.location.href = "/voucher";
 
-            //Display user object or console
+            //Display user object on console
             console.log("Display Name: " + user.displayName);
             console.log("Email: " + user.email);
             console.log("UID: " + user.uid);
@@ -116,8 +131,8 @@ class VoucherPage extends Component {
                     "referred_customers": 0,
                     "campaigns": {}
                 },
-                "created_at": "2016-07-04T08:01:51Z",
-                "updated_at": "2018-03-29T16:05:25Z",
+                "created_at": "",
+                "updated_at": "",
                 "object": "customer"
             })
 
@@ -138,37 +153,77 @@ class VoucherPage extends Component {
 
     }
 
+    handleVoucher(props) {
+
+       /* console.log('VOUCHERS: ');
+
+
+        client.distributions.publish({
+
+            "campaign": "Summer Sale",
+            "customer": {
+                "source_id": "",
+                "email": "",
+                "name": ""
+            },
+            "metadata": {
+                "test": true,
+                "provider": "PMA"
+            }
+        })
+            .then((response) => response.json())
+            .then(data => this.setState({voucherObj: data.voucherObj}));
+            */
+    }
+
+    handleSignOut(){
+
+        console.log("SIGNING OUT");
+
+        firebase.auth().signOut().then(function() {
+            // Sign-out successful - then go back to product page
+            //document.location.assign(document.location.origin + "/")
+            window.history.go(-2);
+        }).catch(function(error) {
+            // error
+        });
+
+    }
+
     render(){
 
         return(
-
+            <MuiThemeProvider>
             <div className="user_info">
+                <div className="sign_out">
+                    <ExitIcon color={white} hoverColor={greenA200} style={{width: 50, height: 50}} onClick={this.handleSignOut} />
+                </div>
                 <h3 className="user_name">{this.state.user_name}</h3>
-                <img src={this.state.user_photo} alt="Avatar" className="user_photo" />
-                <div><br/></div>
+                <img src={this.state.user_photo} alt="" className="user_photo" />
+                <div><br/><br/></div>
+                <div className="heading">Get Voucher and Take to Casheer</div><br/>
                 <div>
                     <div className="voucherify-get-voucher"
                          data-client-app-id="2dc19d68-85a9-487b-9179-90600753c22f"
                          data-client-token="d6921199-d3cb-4f5b-b4fd-ebe31dbc1657"
                          data-email-required="true"
+                         data-name-field="false"
+                         data-phone-field="false"
+                         data-address-line-1-field="false"
+                         data-address-line-2-field="false"
+                         data-postal-code-field="false"
+                         data-country-field="false"
+                         data-state-field="false"
+                         data-city-field="false"
+                         data-email-field="false"
                          data-name-required="false"
-                         data-campaign="Summer Sale"></div>
-                </div>
-                <div>
-                    <div class="voucherify-voucher-redeem"
-                         data-client-app-id="2dc19d68-85a9-487b-9179-90600753c22f"
-                         data-client-token="d6921199-d3cb-4f5b-b4fd-ebe31dbc1657"
+                         data-state-field-label="County"
+                         data-campaign="Summer Sale">
+                    </div>
 
-                         data-code-field="true"
-                         data-code-field-label="Voucher"
-
-                         data-button-label="Redeem voucher"
-
-
-                         data-metadata="{'example': true, 'lang': 'eng'}"></div>
                 </div>
             </div>
-
+            </MuiThemeProvider>
         );
     }
 

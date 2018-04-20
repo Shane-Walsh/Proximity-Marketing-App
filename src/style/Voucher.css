@@ -12,7 +12,19 @@
     height: 60px;
     background-color: lightpink;
 }
+.sign_out{
+    position: absolute;
+    left: 10px;
+}
+.sign_btn{
+    font-size: 36px;
+    color: white;
+}
 .user_name{
     font-weight: lighter;
     color: white;
+}
+.heading{
+    color: lightpink;
+    font-size: larger;
 }
