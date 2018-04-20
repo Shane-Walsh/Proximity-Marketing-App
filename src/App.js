@@ -6,7 +6,7 @@ import RedeemVoucher from "./routes/Voucher";
 import LandingPage from "./routes/Landing";
 import SignInPage from "./routes/Signin";
 import TvPage from './routes/SAMSUNG_TV';
-import FootwarePage from "./routes/ASICS_Runners";
+import FootwarePage from "./routes/ASICS_RUNNERS";
 
 
 class App extends Component {
