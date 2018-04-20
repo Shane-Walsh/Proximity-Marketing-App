@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
-import { Router, RouterContext, Link, browserHistory } from 'react-router';
 
 import '../style/Voucher.css';
 import ExitIcon from 'material-ui/svg-icons/action/exit-to-app';
@@ -22,10 +21,6 @@ const client = voucherifyClient({
     applicationId: '2fec3394-7a05-4f36-b431-0129e74d904b',
     clientSecretKey: 'fb668b0b-b2cf-4c63-b28c-58efb561f588'
 })
-
-const iconStyles = {
-
-};
 
 class VoucherPage extends Component {
 
@@ -183,7 +178,7 @@ class VoucherPage extends Component {
         firebase.auth().signOut().then(function() {
             // Sign-out successful - then go back to product page
             //document.location.assign(document.location.origin + "/")
-            window.history.go(-2);
+            window.history.go(-4);
         }).catch(function(error) {
             // error
         });
