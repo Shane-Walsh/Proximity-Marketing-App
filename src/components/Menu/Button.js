@@ -6,9 +6,6 @@ import '../../style/Button.css';
 class FloatingButton extends Component {
 
     handleClick(){
-        //window.location.href = "/voucher";
-        //conditional: if user signed in
-        //window.location.href = "/signin";
         document.location.assign(document.location.origin + "/Signin")
     }
 

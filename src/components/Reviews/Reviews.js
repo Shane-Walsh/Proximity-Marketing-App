@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../../style/Reviews.css';
-//import Stars from "./Ratings";
-//import Picview from "./Pics";
 import StarRatingComponent from 'react-star-rating-component';
 
 

@@ -35,7 +35,7 @@ class SignInPage extends Component {
 
         firebase.auth().signInWithRedirect(providerTwitter);
 
-       //if(user){
+        //if(user){
 
       // }
     }

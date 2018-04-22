@@ -12,9 +12,6 @@ const provider = new firebase.auth.GoogleAuthProvider();
 //require firestore for data stoarge
 const firestore = require("firebase/firestore");
 
-//web client id ="549732289667-2h6nh25v3kkl3mpjl5ape0trj2qodkih.apps.googleusercontent.com";
-//sec = "mBUZznYNyw2DpIxOK46H-Qan";
-
 const voucherifyClient = require('voucherify');
 
 const client = voucherifyClient({
@@ -67,8 +64,6 @@ class VoucherPage extends Component {
     handleGoogleSignin(user){
 
         if(user){
-            //if user signed in - go to voucher page
-            //window.location.href = "/voucher";
 
             //Display user object on console
             console.log("Display Name: " + user.displayName);
@@ -176,8 +171,7 @@ class VoucherPage extends Component {
         console.log("SIGNING OUT");
 
         firebase.auth().signOut().then(function() {
-            // Sign-out successful - then go back to product page
-            //document.location.assign(document.location.origin + "/")
+
             window.history.go(-4);
         }).catch(function(error) {
             // error
