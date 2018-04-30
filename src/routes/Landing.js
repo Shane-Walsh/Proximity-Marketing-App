@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import Review from "../components/Reviews/Reviews";
-import Desc from '../components/Descriptions/Description';
-import Compare from "../components/Compare/Comparison";
-import FloatingButton from '../components/Menu/Button';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
@@ -10,16 +6,20 @@ class LandingPage extends Component {
 
     render() {
         return(
-                <MuiThemeProvider>
-                      <div>
-                          <Desc/>
-                          <h1>Reviews</h1>
-                          <Review/>
-                          <h1>Price Comparison</h1>
-                          <Compare/>
-                          <FloatingButton />
-                      </div>
-                </MuiThemeProvider>
+            <MuiThemeProvider>
+
+                <div className="card">
+                    <br/>
+                    <img src={ require('../assets/mallbeacons.jpg') } alt="Beacons" className="imgDesc" />
+                    <br/><br/>
+                </div>
+                <p><h1>Proximity Marketing App</h1></p>
+                <div className="card">
+                    <br/><br/>
+                    <p>Don't forget to switch Bluetooth on at Shane's Super Stores to avail of product reviews & special offers</p>
+                    <br/><br/>
+                </div>
+            </MuiThemeProvider>
         )
     }
 }
