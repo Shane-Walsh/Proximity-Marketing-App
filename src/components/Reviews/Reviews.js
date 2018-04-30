@@ -5,7 +5,7 @@ import StarRatingComponent from 'react-star-rating-component';
 
 //const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1516737971798&sort=crawled&q=Asics%20Gel&size=7';
 //Asics Gel-Lyte Trainers
-const url = 'http://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1522501482310&sort=crawled&q=ASICS%20GEL%20language%3Aenglish&size=5';
+const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1522501482310&sort=crawled&q=ASICS%20GEL%20language%3Aenglish&size=5';
 class Review extends Component {
 
     constructor() {
