@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import '../../style/Compare.css';
 
+
+//SAMSUNG 75 TV language:english
+const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=SAMSUNG%2075%20TV%20language%3Aenglish&size=3';
+
 //Criteria: 4K Smart TV
-
-
-const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=4K%20Smart%20TV&size=4';
+//const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=4K%20Smart%20TV&size=4';
 
 
 
