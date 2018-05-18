@@ -3,8 +3,6 @@ import '../../style/Reviews.css';
 import StarRatingComponent from 'react-star-rating-component';
 
 //Criteria: Samsung 4K Smart TV language:english rating:5
-//const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1520370469258&sort=crawled&q=Samsung%204K%20Smart%20TV%20language%3Aenglish%20rating%3A5&size=7';
-//added item.title:TV
 const url = 'https://webhose.io/reviewFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&ts=1522502420324&sort=crawled&q=SAMSUNG%204K%20SMART%20TV%20language%3Aenglish%20rating%3A5%20item.title%3ATV&size=5';
 
 class ReviewsTvPage extends Component {

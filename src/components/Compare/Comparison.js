@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import '../../style/Compare.css';
-//import Picview from "./Pics";
 
+//Criteria: ASICS Fuze X Price > 100 & Price < 140
 const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Asics%20FuzeX%20Lyte%20language%3Aenglish%20price%3A%3E100%20price%3A%3C140&size=4';
-//Nike < 140
-//http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Women%20Running%20brand%3ANike%20site%3Aaliexpress.com%20price%3A%3C140&ts=1516747792991
-//Adidas
-//http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Women%20Running%20Trainers%20brand%3AAdidas%20price%3A%3C140%20OR%20brand%3ANike%20site%3Aebay.com%20OR%20site%3Atesco.com%20OR%20site%3Aaliexpress.com&ts=1516749035484
-//http://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=Women%20Running%20Trainers%20brand%3AAdidas%20price%3A%3C140%20OR%20brand%3ANike%20site%3Aebay.com%20OR%20site%3Atesco.com%20OR%20site%3Aaliexpress.com&ts=1511565298768
+
+
 class Compare extends Component {
 
     constructor() {
