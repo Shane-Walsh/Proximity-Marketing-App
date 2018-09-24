@@ -11,6 +11,9 @@
 # code coverage
 /coverage
 
+# documentation
+/documentation
+
 # misc
 .DS_Store
 .idea
