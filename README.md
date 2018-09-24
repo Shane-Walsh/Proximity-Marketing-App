@@ -1,4 +1,4 @@
-## Proximity Marketing App (PMA)
+# Proximity Marketing App (PMA)
 
 Using Bluetooth Low Energy (BLE) beacon technology, this web application provides shoppers with relevant
 
