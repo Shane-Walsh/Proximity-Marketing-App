@@ -14,6 +14,14 @@ experience where reviews and product insights are at your fingertips - the PMA b
 
 together.
 
+## Documentation
+
+See analysis and design documentation [here](https://github.com/Shane-Walsh/Proximity-Marketing-App/wiki/Analysis-&-Design) on GitHub Wikis
+
+Alternatively, download the analysis and design PDF [here](https://github.com/Shane-Walsh/Proximity-Marketing-App/blob/master/documentation/Development%20Journey.pdf) and the development journey PDF [here](https://github.com/Shane-Walsh/Proximity-Marketing-App/blob/master/documentation/Development%20Journey.pdf) 
+<br>
+<hr>
+
 + Main features
 
     - Product Description
