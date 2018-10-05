@@ -3,7 +3,7 @@ import '../../style/Compare.css';
 
 
 //Criteria: SAMSUNG 75 TV language:english
-const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=SAMSUNG%2075%20TV%20language%3Aenglish&size=3';
+const url = 'https://webhose.io/productFilter?token=485b74f2-1b38-4a80-9fb3-19819afae4e2&format=json&q=SAMSUNG%204K%20LED%20SMART%20TV%2075%201080P%20language%3Aenglish&size=3';
 
 
 class CompareTvPage extends Component {
