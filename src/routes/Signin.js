@@ -4,7 +4,6 @@ import '../style/Signin.css';
 
 import FacebookLoginButton from 'react-social-login-buttons/lib/buttons/FacebookLoginButton';
 import TwitterLoginButton from 'react-social-login-buttons/lib/buttons/TwitterLoginButton';
-import InstagramLoginButton from 'react-social-login-buttons/lib/buttons/InstagramLoginButton';
 import GoogleLoginButton from 'react-social-login-buttons/lib/buttons/GoogleLoginButton';
 
 //const provider = new firebase.auth.GoogleAuthProvider();
