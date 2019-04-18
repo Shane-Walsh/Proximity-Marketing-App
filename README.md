@@ -1,7 +1,7 @@
 # Proximity Marketing App (PMA)
 #### Final Year Project - BSc (HONS) Software Systems Development, Waterford Institute of Technology
 <br>
-<img src="https://user-images.githubusercontent.com/20372577/46039895-c2628080-c106-11e8-933c-5cd3f625dd09.jpg" height="300" width="400">
+<img src="https://user-images.githubusercontent.com/20372577/56387130-6d5d9780-621b-11e9-856c-3783af311a7b.png" height="300" width="400">
 
 <br>
 
